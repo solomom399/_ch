@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-	var path = "http://localhost/lc_server/"
+	var path = "https://savinglifesglobal.com.ng/lc_server/"
 
 	var LC = function () {
 		
