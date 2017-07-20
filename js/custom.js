@@ -34,10 +34,12 @@ $(document).ready(function () {
 
 		this.onBackKeyDown = function (e) {
 			e.preventDefault();
-			navigator.notification.confirm("Are you sure you want to exit this app", function() {
-				navigator.app.exitApp();
-			}, 'Exit!', ['NO','YES'])
-			
+		    var conf = confirm("Are you sure you want to exit this app")
+		    if(conf){
+		        navigator.app.exitApp();
+		    } else {
+		        alert('Enjoy yourself!');
+		    }
 		}
 
 
@@ -111,14 +113,14 @@ $(document).ready(function () {
 
 	$("#register_form").validate({
 		rules: {
-		    c_password: {
-			equalTo: "#password"
-		    }
-		},
+            c_password: {
+            	equalTo: "#password"
+            }
+        },
 		ignore: ".ignore",
-	    	showErrors: function(errorMap, errorList) {
-			$(".form-errors").html("All fields must be completed before you submit the form.");
-	    	},
+	    showErrors: function(errorMap, errorList) {
+	        $(".form-errors").html("All fields must be completed before you submit the form.");
+	    },
 		submitHandler: function (form) {
 
 			LC.load('Please wait...')
@@ -132,13 +134,11 @@ $(document).ready(function () {
 					swal.close()
 					$("#register_form").trigger('reset')
 				} else {
-					navigator.notification.confirm('Unable to register this acction...Try again', function() {
-						$("#register_form").trigger('submit')
-					}, '!', 'Try again')
-					
+					alert('Unable to register this acction...Try again')
 					swal.close()
 				}
 				
+				console.log(resp)
 			}, function (a, b, c) {
 				console.log(a)
 			})
@@ -164,12 +164,9 @@ $(document).ready(function () {
 
 					window.location = 'data/index.html'
 					localStorage.setItem('user_details', JSON.stringify(resp.entry))
-		
+
 				} else {
-					navigator.notification.confirm('Unable to login...Check your login details', function() {
-						//
-					}, '!', 'OK')
-					swal.close()
+					alert('Unable to login...Check your login details')
 				}
 			}, function (a, b, c) {
 				console.log(a)
