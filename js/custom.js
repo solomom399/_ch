@@ -34,12 +34,10 @@ $(document).ready(function () {
 
 		this.onBackKeyDown = function (e) {
 			e.preventDefault();
-		    var conf = confirm("Are you sure you want to exit this app")
-		    if(conf){
-		        navigator.app.exitApp();
-		    } else {
-		        alert('Enjoy yourself!');
-		    }
+			navigator.notification.confirm("Are you sure you want to exit this app", function() {
+				navigator.app.exitApp();
+			}, 'Exit!', ['NO','YES'])
+			
 		}
 
 
@@ -134,7 +132,10 @@ $(document).ready(function () {
 					swal.close()
 					$("#register_form").trigger('reset')
 				} else {
-					alert('Unable to register this acction...Try again')
+					navigator.notification.confirm('Unable to register this acction...Try again', function() {
+						$("#register_form").trigger('submit')
+					}, '!', 'Try again')
+					
 					swal.close()
 				}
 				
@@ -165,7 +166,9 @@ $(document).ready(function () {
 					localStorage.setItem('user_details', JSON.stringify(resp.entry))
 		
 				} else {
-					alert('Unable to login...Check your login details')
+					navigator.notification.confirm('Unable to login...Check your login details', function() {
+						//
+					}, '!', 'OK')
 					swal.close()
 				}
 			}, function (a, b, c) {
