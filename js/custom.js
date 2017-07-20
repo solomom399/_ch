@@ -113,14 +113,14 @@ $(document).ready(function () {
 
 	$("#register_form").validate({
 		rules: {
-            c_password: {
-            	equalTo: "#password"
-            }
-        },
+		    c_password: {
+			equalTo: "#password"
+		    }
+		},
 		ignore: ".ignore",
-	    showErrors: function(errorMap, errorList) {
-	        $(".form-errors").html("All fields must be completed before you submit the form.");
-	    },
+	    	showErrors: function(errorMap, errorList) {
+			$(".form-errors").html("All fields must be completed before you submit the form.");
+	    	},
 		submitHandler: function (form) {
 
 			LC.load('Please wait...')
@@ -129,6 +129,7 @@ $(document).ready(function () {
 			formData.append('key', 'register')
 
 			LC.makeUse(formData, "", function (resp) {
+				$("a[pick=login]").trigger('click')
 				swal.close()
 			}, function (a, b, c) {
 				console.log(a)
