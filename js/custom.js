@@ -129,7 +129,7 @@ $(document).ready(function () {
 			formData.append('key', 'register')
 
 			LC.makeUse(formData, "", function (resp) {
-				console.log(resp)
+				swal.close()
 			}, function (a, b, c) {
 				console.log(a)
 			})
@@ -155,9 +155,10 @@ $(document).ready(function () {
 
 					window.location = 'data/index.html'
 					localStorage.setItem('user_details', JSON.stringify(resp.entry))
-
+		
 				} else {
 					alert('Unable to login...Check your login details')
+					swal.close()
 				}
 			}, function (a, b, c) {
 				console.log(a)
