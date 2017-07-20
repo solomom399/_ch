@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *">
+    <script type="text/javascript">
+            if (localStorage.getItem('user_details') != null) { window.location = 'data/index.html' }
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/themify-icons.css">
+    <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>Let's Chat</title>
+</head>
+
+<body>
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="preloader-wrapper small active">
+                <div class="spinner-layer wht">
+                  <div class="circle-clipper left">
+                    <div class="circle"></div>
+                  </div><div class="gap-patch">
+                    <div class="circle"></div>
+                  </div><div class="circle-clipper right">
+                    <div class="circle"></div>
+                  </div>
+                </div>
+            </div>
+            <h5 class="white-text">Let's Chat</h5>
+            <small style="color: #fff;">Reach the world</small>
+        </div>
+    </div>
+    <div class="blue_wallpaper hundred">
+
+        <div class="clearfix">
+            <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 padding-50">
+                <div class="card">
+
+                    <div class="clearfix">
+                        <a href="#login" data-toggle="tab" class="waves-effect waves-light col-md-6 col-sm-6 blue padding-20">LOGIN</a> 
+                        <a href="#register" data-toggle="tab" class="waves-effect waves-light col-md-6 col-sm-6 blue padding-20">REGISTER</a>
+                    </div>
+
+                    <div class="card-content">
+                        
+
+                        <div id="myTabContent" class="tab-content">
+
+                            <div class="tab-pane fade in active" id="login">
+                                <p class="form-errors"></p>
+                                <form method="POST" id="login_form">
+                                    <div class="input-field">
+                                        <input placeholder="Your email (example@mail.com)" name="email" type="email" required="required">
+                                    </div>
+
+                                    <div class="input-field">
+                                        <input placeholder="Password" type="password" name="password" required="required">
+                                    </div>
+                                    <br><br>
+                                    <div class="form-group center-align">
+                                        <button class="btn blue">LOGIN</button>
+                                        <br><br>
+                                        <p class="form-group center-align">
+                                            <a href="">Forgotten password?</a>
+                                        </p>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="tab-pane fade" id="register">
+                                <p class="form-errors"></p>
+                                <form method="POST" id="register_form">
+                                    <div class="input-field">
+                                        <input placeholder="Surname" name="surname" type="text" required="required">
+                                    </div>
+
+                                    <div class="input-field">
+                                        <input placeholder="Firstname" name="firstname" type="text" required="required">
+                                    </div>
+
+                                    <div class="input-field">
+                                        <input placeholder="Your email (example@mail.com)" name="email" type="email" required="required">
+                                    </div>
+
+                                    <div class="input-field">
+                                        <input placeholder="Password" id="password" type="password" name="password" required="required">
+                                    </div>
+
+                                    <div class="input-field">
+                                        <input placeholder="Confirm password" type="password" name="c_password" required="required">
+                                    </div>
+
+                                    <br><br>
+                                    <div class="form-group center-align">
+                                        <button class="btn blue">REGISTER</button>
+                                        <br><br>
+                                    </div>
+
+                                </form>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.js"></script>
+    <script type="text/javascript" src="js/sweetalert.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+
+</html>
