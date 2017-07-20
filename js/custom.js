@@ -129,8 +129,15 @@ $(document).ready(function () {
 			formData.append('key', 'register')
 
 			LC.makeUse(formData, "", function (resp) {
-				$("a[pick=login]").trigger('click')
-				swal.close()
+				if (resp.status == '1') {
+					$("a[pick=login]").trigger('click')
+					swal.close()
+					$("#register_form").trigger('reset')
+				} else {
+					alert('Unable to register this acction...Try again')
+					swal.close()
+				}
+				
 			}, function (a, b, c) {
 				console.log(a)
 			})
