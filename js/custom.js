@@ -7,9 +7,23 @@ $(document).ready(function () {
 	    // device APIs are available
 	    //
 	    function onDeviceReady() {
-		var myContact = navigator.contacts.create({"displayName": "Test User"});
-		myContact.note = "This contact has a note.";
-		console.log("The contact, " + myContact.displayName + ", note: " + myContact.note);
+		   var options = new ContactFindOptions();
+		   options.filter = "";
+		   options.multiple = true;
+		   fields = ["displayName"];
+		   navigator.contacts.find(fields, contactfindSuccess, contactfindError, options);
+
+		   function contactfindSuccess(contacts) {
+		      for (var i = 0; i < contacts.length; i++) {
+			 alert("Display Name = " + contacts[i].displayName);
+		      }
+		   }
+
+		   function contactfindError(message) {
+		      alert('Failed because: ' + message);
+		   }
+
+		
 	    }
 
 	
