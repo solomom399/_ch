@@ -105,10 +105,6 @@ $(document).ready(function () {
 	var LC = new LC()
 	
 	
-	document.getElementById("createContact").addEventListener("click", createContact);
-	document.getElementById("findContact").addEventListener("click", findContact);
-	document.getElementById("deleteContact").addEventListener("click", deleteContact);
-	
 	
 	
 	
