@@ -1,8 +1,5 @@
-$(document).ready(function () {
 
-	var path = "https://savinglifesglobal.com.ng/lc_server/"
-	
-	document.addEventListener("deviceready", onDeviceReady, false);
+document.addEventListener("deviceready", onDeviceReady, false);
 
 	    // device APIs are available
 	    //
@@ -25,6 +22,10 @@ $(document).ready(function () {
 
 		
 	    }
+
+$(document).ready(function () {
+
+	var path = "https://savinglifesglobal.com.ng/lc_server/"
 
 	
 	var LC = function () {
