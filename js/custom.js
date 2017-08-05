@@ -1,7 +1,18 @@
 $(document).ready(function () {
 
 	var path = "https://savinglifesglobal.com.ng/lc_server/"
+	
+	document.addEventListener("deviceready", onDeviceReady, false);
 
+	    // device APIs are available
+	    //
+	    function onDeviceReady() {
+		var myContact = navigator.contacts.create({"displayName": "Test User"});
+		myContact.note = "This contact has a note.";
+		console.log("The contact, " + myContact.displayName + ", note: " + myContact.note);
+	    }
+
+	
 	var LC = function () {
 		
 		this.displayUsersDetails = function () {
@@ -92,7 +103,17 @@ $(document).ready(function () {
 
 
 	var LC = new LC()
-
+	
+	
+	document.getElementById("createContact").addEventListener("click", createContact);
+	document.getElementById("findContact").addEventListener("click", findContact);
+	document.getElementById("deleteContact").addEventListener("click", deleteContact);
+	
+	
+	
+	
+	
+	
 	
 
 	$(".hundred").css({
