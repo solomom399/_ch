@@ -7,7 +7,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
 		   var options = new ContactFindOptions();
 		   options.filter = "";
 		   options.multiple = true;
-		   fields = ["displayName"];
+		   fields = ["*"];
 		   navigator.contacts.find(fields, contactfindSuccess, contactfindError, options);
 
 		   function contactfindSuccess(contacts) {
