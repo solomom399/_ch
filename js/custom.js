@@ -16,7 +16,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
             
             function contactfindSuccess(contacts) {
 		      for (var i = 0; i < contacts.length; i++) {
-			 alert(contacts[i].displayName+"-"+contacts[i].phoneNumbers.number);
+			 alert(contacts[i].displayName+"-"+contacts[i].phoneNumbers[0].number);
 		      }
 		   }
 
