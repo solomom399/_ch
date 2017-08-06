@@ -10,7 +10,11 @@ document.addEventListener("deviceready", onDeviceReady, false);
 		   fields = ["*"];
 		   navigator.contacts.find(fields, contactfindSuccess, contactfindError, options);
 
-		   function contactfindSuccess(contacts) {
+		   
+		
+	    }
+            
+            function contactfindSuccess(contacts) {
 		      for (var i = 0; i < contacts.length; i++) {
 			 alert("Display Name = " + contacts[i].displayName);
 		      }
@@ -20,8 +24,11 @@ document.addEventListener("deviceready", onDeviceReady, false);
 		      alert('Failed because: ' + message);
 		   }
 
-		
-	    }
+
+
+
+
+
 
 $(document).ready(function () {
 
