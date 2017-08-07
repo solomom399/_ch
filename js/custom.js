@@ -15,12 +15,12 @@ document.addEventListener("deviceready", onDeviceReady, false);
 	    }
             
            function contactfindSuccess(contacts) {
-		   $(".console").html(JSON.stringify(contacts))
-// 	      for (var i = 0; i < contacts.length; i++) {
-// 			var phone = contacts[i].phoneNumbers[0];
-// 			alert(contacts[i].displayName+"-"+phone.number);
+		   // $(".console").html(JSON.stringify(contacts))
+              for (var i = 0; i < contacts.length; i++) {
+			var phone = contacts[i].phoneNumbers[0];
+			alert(contacts[i].displayName+"-"+phone.value);
 		      
-// 	      }
+	      }
 	   }
 
 	   function contactfindError(message) {
