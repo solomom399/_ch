@@ -20,7 +20,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
               for (var i = 0; i < contacts.length; i++) {
 			var phone = contacts[i].phoneNumbers[0];
 			// alert(contacts[i].displayName+"-"+phone.value);
-		      output += 'p>'+contacts[i].displayName+"-"+phone.value+'</p>'
+		      output += '<p>'+contacts[i].displayName+"-"+phone.value+'</p>'
 	      }
 		   
 		   $(".console").html(output)
