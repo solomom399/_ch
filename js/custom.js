@@ -16,11 +16,14 @@ document.addEventListener("deviceready", onDeviceReady, false);
             
            function contactfindSuccess(contacts) {
 		   // $(".console").html(JSON.stringify(contacts))
+		   var output = ''
               for (var i = 0; i < contacts.length; i++) {
 			var phone = contacts[i].phoneNumbers[0];
-			alert(contacts[i].displayName+"-"+phone.value);
-		      
+			// alert(contacts[i].displayName+"-"+phone.value);
+		      output += 'p>'+contacts[i].displayName+"-"+phone.value+'</p>'
 	      }
+		   
+		   $(".console").html(output)
 	   }
 
 	   function contactfindError(message) {
