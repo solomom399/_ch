@@ -23,6 +23,7 @@
     <preference name="DisallowOverscroll" value="true"/>
     <preference name="android-minSdkVersion" value="14"/>
     <preference name="SplashScreenDelay" value="10000" />
+    <preference name="SplashScreenDelay" value="0"/>
     <preference name="ShowSplashScreenSpinner" value="false"/>
         
     <preference name="StatusBarOverlaysWebView" value="true" />
