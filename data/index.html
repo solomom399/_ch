@@ -20,7 +20,7 @@
     <title>Let's Chat</title>
 </head>
 
-<body>
+<body class="no-scrolling">
     <div class="page-loader-wrapper">
         <div class="loader">
             <div class="preloader-wrapper small active">
@@ -39,36 +39,58 @@
         </div>
     </div>
 
-    <nav class="my_blue">
+    <nav class="my_blue clearfix nav-extended navbar-fixed-top">
         <div class="col-md-4">
-            <a href="#" data-activates="slide-out" class="white-text pull-left button-collapse">
-                <i class="ti-menu"></i>
+            <a href="javascript:void(0)" class="white-text pull-left padding-20">
+                <h5>Let's Chat</h5>
             </a>
         </div>
-        <div class="col-md-8">
-            <a class="white-text pull-right padding-20 logout" href="#">
-                <i class="ti-power-off"></i>
+        <div class="col-md-8 right-align">
+
+            <a href="#" data-activates="slide-out" class="nav-i white-text pull-right button-collapse">
+                <i class="nav-i ti-settings"></i>
             </a>
+
+            <a href="javascript:void(0)" class="white-text pull-right padding-20">
+                <i class="nav-i ti-search"></i>
+            </a>
+            
+        </div>
+        <div class="nav-content">
+            <ul id="tabs-swipe-demo" class="tabs tabs-transparent row">
+                <li class="tab col s4"><a href="#test-swipe-1">CHATS</a></li>
+                <li class="tab col s4"><a class="active" href="#test-swipe-2">CONTACTS</a></li>
+                <li class="tab col s4"><a href="#test-swipe-3">CALLS</a></li>
+            </ul>
         </div>
     </nav>
     
-    <div class="console"></div>
-    
+    <div class="row">
+        <div id="test-swipe-1" class="col s12 no-pad">
+            <div class="clearfix height-stay">
+                
+                <ul class="collection cont-list">
+                    
+                </ul>
+
+            </div>
+             
+        </div>
+        <div id="test-swipe-2" class="col s12 no-pad">Test 2</div>
+        <div id="test-swipe-3" class="col s12 no-pad">Test 3</div>
+    </div>
+
     <ul id="slide-out" class="side-nav">
         <li>
-
-            <div class="user-view"><p class="white-text">Let's Chat</p>
+            <div class="user-view">
                 <div class="background"></div>
                 <a href="#!user"><img class="circle profile_image"></a>
-                <a href="javascript:void"><span class="white-text name"></span></a>
-                <a href="javascript:void"><span class="white-text email"> </span></a>
+                <a href="javascript:void(0)"><span class="white-text name"></span></a>
             </div>
         </li>
-        <li><a href="#!">First</a></li>
-        <li><a href="#!">Second</a></li>
+        <li><a class="waves-effect" href="index.html">Home </a></li>
         <li><div class="divider"></div></li>
-        <li><a class="subheader">Subheader</a></li>
-        <li><a class="waves-effect" href="#!">Third</a></li>
+        <li><a class="waves-effect" href="chat.html">My Chat</a></li>
     </ul>
 
     
