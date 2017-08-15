@@ -24,7 +24,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
                         '<img src="../icon.png" alt="" class="circle">'+
                         '<span class="title">'+contacts[i].displayName+'</span>'+
                         '<p>'+phone.value+'<br>'+
-                        '</p>+
+                        '</p>'+
                         '<a class="secondary-content">'+
                             '<small>Online</small>'+
                         '</a>'+
