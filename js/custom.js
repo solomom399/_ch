@@ -20,10 +20,19 @@ document.addEventListener("deviceready", onDeviceReady, false);
               for (var i = 0; i < contacts.length; i++) {
 			var phone = contacts[i].phoneNumbers[0];
 			// alert(contacts[i].displayName+"-"+phone.value);
-		      output += '<p>'+contacts[i].displayName+"-"+phone.value+'</p>'
+		      output += '<li class="collection-item avatar">'+
+                        '<img src="../icon.png" alt="" class="circle">'+
+                        '<span class="title">'+contacts[i].displayName+'</span>'+
+                        '<p>'+phone.value+'<br>'+
+                        '</p>+
+                        '<a class="secondary-content">'+
+                            '<small>Online</small>'+
+                        '</a>'+
+                    '</li>'
+		      
 	      }
 		   
-		   $(".console").html(output)
+		   $(".cont-list").html(output)
 	   }
 
 	   function contactfindError(message) {
@@ -133,9 +142,15 @@ $(document).ready(function () {
 	var LC = new LC()
 	
 	
-	
-	
-	
+	$(".hundred").css({
+		'min-height': $(window).height()
+	})
+
+
+	$(".height-stay").css({
+		'height': $(window).height()-157
+	})
+
 	
 	
 	
