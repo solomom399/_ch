@@ -7,6 +7,7 @@ body {
     -webkit-touch-callout: none;
     -webkit-text-size-adjust: none;
     -webkit-user-select: none;
+    background: rgba(158, 158, 158, 0.05);
 }
 
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
@@ -26,9 +27,83 @@ body {
 
 
 @media only screen and (max-width: 992px){
-.side-nav .user-view, .side-nav .userView {
-    padding: 16px 16px 0;
+    .side-nav .user-view, .side-nav .userView {
+        padding: 16px 16px 0;
+    }
 }
+
+
+.nav-i {
+    padding-bottom: 0px;
+    height: auto;
+}
+
+
+.no-border {
+    border: none !important;
+}
+
+
+.my-search, .my-search:focus {
+    border: 1px solid #d9d1d1 !important;
+    border-top-right-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+    padding: 0px 5px !important;
+    height: 30px !important;
+    box-shadow: 0 1px 0 0 #d9d1d1 !important;
+    margin: 0px !important;
+    border-left-color: transparent !important;
+    background: #fff !important;
+}
+
+
+.search-button-group {
+    box-shadow: none;
+    height: 32px;
+    box-shadow: 0 1px 0 0 #d9d1d1 !important;
+    border: 1px solid #d9d1d1 !important;
+    border-top-left-radius: 5px !important;
+    border-bottom-left-radius: 5px !important;
+    color: #d9d1d1 !important;
+    padding: 0px 15px !important;
+    margin-right: -12px !important;
+    border-right-color: transparent !important;
+    z-index: -3;
+}
+
+.friends_list_img {
+    border-radius: 50%;
+    height: 50px;
+    border: 1px solid #d9d1d1;
+}
+
+.friends_list_a {
+    display: block;
+    padding: 15px 0px;
+}
+
+.friends_list_i {
+    margin-top: 20px !important;
+}
+
+
+.friends_list_name {
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+
+.friends_list {
+    padding: 10px !important;
+}
+
+.friends_list li {
+    border-bottom: 1px solid #d9d1d1; 
+}
+
+
+.no-p {
+    padding: 0px;
 }
 
 
@@ -70,6 +145,12 @@ body {
     text-decoration: none;
     display: block;
 }
+
+
+.padding-10 {
+    padding: 10px;
+}
+
 
 .gs_blue {
     padding: 20px;
@@ -158,8 +239,8 @@ body {
 }
 
 
-a:hover {
-    text-decoration: none;
+a:hover, a:focus {
+    text-decoration: none !important;
 }
 
 .error {
@@ -181,4 +262,145 @@ a:hover {
 .input-field input.invalid {
     border-bottom: 1px solid rgb(0, 147, 221) !important;
     box-shadow: 0 1px 0 0 rgb(0, 147, 221) !important;
+}
+
+
+
+/*==================*/
+
+
+.talk-bubble {
+    margin: 5px 40px;
+    display: block;
+    position: relative;
+    width: 200px;
+    height: auto;
+    background-color: white;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+}
+
+
+
+
+
+.tri-right.left-top:after{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -20px;
+    right: auto;
+    top: 0px;
+    bottom: auto;
+    border: 22px solid;
+    border-color: white transparent transparent transparent;
+}
+
+
+.tri-left.right-top:after{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: auto;
+    right: -20px;
+    top: 0px;
+    bottom: auto;
+    border: 22px solid;
+    border-color: white transparent transparent transparent;
+}
+
+
+
+.talktext{
+    padding: 1em;
+    text-align: left;
+    line-height: 1.5em;
+}
+
+.talktext p{
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+}
+
+
+.navbar-inverse {
+    border: 1px solid  rgb(174, 174, 174);
+    cursor: default;
+    margin: 0px;
+}
+
+
+
+.navbar-inverse .navbar-brand {
+    color: #fff;
+    cursor: default;
+}
+
+.user-preview-img {
+    background: #eee;
+    width: 100px;
+    height: 100px;
+}
+
+
+#photo {
+    visibility: hidden;
+    width: 1px;
+    height: 1px;
+}
+
+label[for="photo"] {
+    cursor: pointer;
+}
+
+
+.tabs-content, .carousel, .carousel-item {
+    min-height: 1007px !important;
+    top: 135px;
+}
+
+
+.height-stay {
+    background: rgba(158, 158, 158, 0.05);
+    width: 100%;
+    overflow-y: scroll;
+}
+
+
+.chat-page {
+    padding: 20px;
+    position: relative;
+    top: 50px;
+    background: rgb(161, 176, 183);
+}
+
+.no-pad {
+    padding: 0px !important;
+}
+
+.list-cont-img {
+    width: 42px;
+    height: 42px;
+}
+
+
+.no-scrolling {
+    overflow: hidden;
+}
+
+.side-nav {
+    z-index: 10020;
+}
+
+.my {
+    background: rgb(0, 147, 221);
+    color: #fff;
+}
+
+
+.my:after {
+    border-color: rgb(0, 147, 221) transparent transparent transparent !important;
 }
