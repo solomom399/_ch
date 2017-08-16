@@ -159,7 +159,7 @@ $(document).ready(function () {
 		'min-height': $(window).height()
 	})
 
-	document.addEventListener("backbutton", LC.onBackKeyDown, false);
+//document.addEventListener("backbutton", LC.onBackKeyDown, false);
 
 	$(".show-load").on('click', function () {
 		LC.load('Please wait...')
